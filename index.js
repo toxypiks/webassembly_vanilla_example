@@ -1,5 +1,5 @@
 async function start() {
-    const wasm = await fetch("./hello.wasm");
+    const wasm = await WebAssembly.instantiateStreaming(fetch("./hello.wasm"));
     console.log(wasm);
 }
 
